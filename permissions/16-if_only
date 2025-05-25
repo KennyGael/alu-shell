@@ -1,6 +1,2 @@
 #!/bin/bash
-owner=$(ls -ld hello | cut -d' ' -f3)
-if test "$owner" = "guillaume"
-then
-  chown vincent hello
-fi
+chown --from=guillaume vincent hello
