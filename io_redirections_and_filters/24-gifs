@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -iname '*.gif' -printf '%f\n' | sort -f | while read f; do echo "${f%.gif}"; done
+find . -type f -name '*.gif' -print0 | xargs -0 -n1 sh -c 'f="$1"; f="${f##*/}"; echo "${f%.gif}"' _ | sort -f
