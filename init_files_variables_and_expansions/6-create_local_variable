@@ -1,0 +1,2 @@
+#!/bin/bash
+my_func() { local BEST="School"; echo "$BEST"; }
