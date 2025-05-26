@@ -1,0 +1,6 @@
+#!/bin/bash
+# Display username, UID, and home directory using a while loop
+
+while IFS=':' read -r username _ uid _ _ _ home _; do
+  echo "$username:$uid:$home"
+done < /etc/passwd
