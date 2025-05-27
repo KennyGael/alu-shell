@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# This script lists currently running processes with user, start time, and command.
+# This script returns the usernames of running processes that match a specific pattern
 
-ps -eo user,lstart,cmd --no-headers | awk '{print $1, $4":"$5":"$6, $8, $9, $10}'
+ps -eo user,comm | grep bash | awk '{print $1}'
