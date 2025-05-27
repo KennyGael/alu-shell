@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# This script lists all running processes in a tree-like format
+# This script lists currently running processes with user, start time, and command.
 
-ps -e --forest -o user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command
+ps -eo user,lstart,cmd --no-headers | awk '{print $1, $4":"$5":"$6, $8, $9, $10}'
