@@ -1,2 +1,2 @@
 #!/bin/bash
-while read line do echo "$line" done | cut -c1 | tr -d '\n' echo
+cut -c1 | tr -d '\n'
