@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# This script returns the usernames of running processes that match a specific pattern
+# Lists all running processes for all users in a user-friendly hierarchical format
 
-ps -eo user,comm | grep bash | awk '{print $1}'
+ps -e -f --forest
